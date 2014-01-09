@@ -1,0 +1,10 @@
+body{
+	background: url(../images/bg.png) no-repeat;
+	background-color: #191919;
+}
+.og-expander{
+	background: white;
+}
+.container > header h1 {
+	color: #FFF7F7;
+}
