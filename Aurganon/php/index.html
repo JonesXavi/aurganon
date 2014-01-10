@@ -1,75 +1,97 @@
-﻿<!doctype html>  
-<head>
-<meta charset="UTF-8">
-<title>AURGANON 2K14</title>
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <script type="text/javascript" src="demo/demo.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-  <link href="css/demo.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript"  src="js/jquery.smint.js"></script>  
-  <script type="text/javascript">
-        $(document).ready( function() {
-        $('.subMenu').smint({
-          'scrollSpeed' : 1000
-          });
-          });
-  </script>
-</head>
-<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
-    <header>
-      <div id="#top">
-        <div class="wrap">
-          <div class="subMenu">
-            <div class="inner">
-              <a href="#" id="sTop" class="subNavBtn active">Home</a> 
-              <a href="#" id="s1" class="subNavBtn">Section 1</a>
-              <a href="#" id="s2" class="subNavBtn">Section 2</a>
-              <a href="#" id="s3" class="subNavBtn">Events</a>
-              <a href="#" id="s4" class="subNavBtn">Section 4</a>
-              <a href="#" id="s5" class="subNavBtn end">Section 5</a>
-            </div>
-          </div>
-        </div>
-      </div>
-  	</header>
-    <div class="section sTop">
-      <div class="inner">
-      </div>
-      <br class="clear">
-    </div>
-    <div class="section s1">
-      <div class="inner">
-      <h1>Section 1</h1>
-      </div>
-    </div>
-    <div class="section s2">
-      <div class="inner">
-      <h1>Section 2</h1>
-      </div>
-    </div>
-    <div class="section s3">
-      <div class="inner">
-      <h1>Section 3</h1>
-      </div>
-    </div>
-    <div class="section s4">
-      <div class="inner">
-      <h1>Section 4</h1>
-      </div>
-    </div>
-    <div class="section s5">
-      <div class="inner">
-      <h1>Section 5</h1>
-      </div>
-    </div>
-  </div>
-   <footer>
-    <div class="container">
-      <br><br>
-      <p class="green"> © Aurganon 2014 .v1 </p> 
-      <a href="#top"><img src="images/back-top.png" alt="back-top" class="back-top"/></a>
-    </div> 
-   </footer>   
-   </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>AURGANON 2014</title>
+		<style type="text/css" media="screen">
+			
+			body{
+				background-color: #000;
+			}
+			
+			#wrapper{
+				width:1200px;
+				margin:0 auto;
+			}
+			#header{
+				height:300px; 
+				background: #000 url(images/bg.png) repeat-y scroll left top;
+				text-align:center;
+
+			}
+			
+			
+			#header h1{
+				padding-top:125px;
+				font-family: Arial, "MS Trebuchet", sans-serif;
+				color:white;
+			}
+			
+			#body{
+				background-color:#000;
+				height:500px;
+			}
+			
+		</style>
+		<!--[if lte IE 6]>
+			<style type="text/css" media="screen">
+				#header div{
+					background-image: none;
+					filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='overlay.png', sizingMethod='scale');
+				}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				
+				<div>
+					<h1><img src="images/aurfull1.jpg"></h1>	
+				</div>	
+			</div>
+			
+			<div id="body">
+			
+			</div>
+		</div>
+	</body>		
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		
+			var scrollSpeed = 50; 	
+			var step = 1; 			
+			var current = 0;			
+			var imageHeight = 4300;	
+			var headerHeight = 300;	
+			
+			
+			var restartPosition = -(imageHeight - headerHeight);
+			
+			function scrollBg(){
+				
+				
+				current -= step;
+				
+				
+				if (current == restartPosition){
+					current = 0;
+				}
+				
+				
+				$('#header').css("background-position","0 "+current+"px");
+				
+				
+			}
+			
+			
+			var init = setInterval("scrollBg()", scrollSpeed);
+
+			
+	</script>	
+
 </html>
