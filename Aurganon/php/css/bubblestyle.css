@@ -10,23 +10,23 @@
     position:absolute;
 }
 .user{
-    top:60px;
+    top:80px;
     left:70px;
 }
 .home{
-   top:60px;
+   top:80px;
    left:274px;
 }
 .shop{
-   top:60px;
+   top:80px;
    left:475px;
 }
 .camera{
-   top:60px;
+   top:80px;
    left:675px;
 }
 .fav{
-   top:60px;
+   top:80px;
    left:875px;
 }
 a.icon{
@@ -44,7 +44,7 @@ a.icon{
     background:transparent url(../images/home.png) no-repeat 0px 0px;
 }
 .shop a.icon{
-    background:transparent url(../images/shop.png) no-repeat 0px 0px;
+    background:transparent url(../images/fav.png) no-repeat 0px 0px;
 }
 .camera a.icon{
     background:transparent url(../images/camera.png) no-repeat 0px 0px;
