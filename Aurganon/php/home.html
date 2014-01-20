@@ -1,75 +1,204 @@
-﻿<!doctype html>  
-<head>
-<meta charset="UTF-8">
-<title>AURGANON 2K14</title>
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <script type="text/javascript" src="demo/demo.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-  <link href="css/demo.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript"  src="js/jquery.smint.js"></script>  
-  <script type="text/javascript">
-        $(document).ready( function() {
-        $('.subMenu').smint({
-          'scrollSpeed' : 1000
-          });
-          });
-  </script>
-</head>
-<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
-    <header>
-      <div id="#top">
-        <div class="wrap">
-          <div class="subMenu">
-            <div class="inner">
-              <a href="#" id="sTop" class="subNavBtn active">Home</a> 
-              <a href="#" id="s1" class="subNavBtn">Section 1</a>
-              <a href="#" id="s2" class="subNavBtn">Section 2</a>
-              <a href="#" id="s3" class="subNavBtn">Events</a>
-              <a href="#" id="s4" class="subNavBtn">Section 4</a>
-              <a href="#" id="s5" class="subNavBtn end">Section 5</a>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Home</title>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/scrolldefault.css" />
+		<link rel="stylesheet" type="text/css" href="css/scrollcomponent.css" />
+		<link rel="stylesheet" href="css/bubblestyle.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style4.css" />
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+		<script src="js/scrollmodernizr.custom.js"></script>
+		<style>
+			section{
+				position: relative;
+			}
+			.content-box{
+				background: black;
+				opacity: 0.8;
+				color: white;
+				height: 350px;
+				width: 700px;
+				position: absolute;
+				top: 200px;
+				left: 37%;
+				padding:30px;
+			}
+			.content-box h2{
+				padding: 0px;
+				margin: 0px;
+			}
+			.content-box div.content{
+				height: 245px;
+				overflow-y: scroll; 
+			}
+			
+			body::-webkit-scrollbar {
+			   
+			}			 
+			body::-webkit-scrollbar-track {
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			}			 
+			body::-webkit-scrollbar-thumb {
+			  background-color: darkgrey;
+			  outline: 1px solid slategrey;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<div class="navigation" id="nav">
+                <div class="item user">
+                    <img src="images/bg_user.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#fbsection1" class="icon"></a>
+                    <h2>About</h2>
+                    
+                </div>
+                <div class="item home">
+                    <img src="images/bg_home.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#fbsection2" class="icon"></a>
+                    <h2>Home</h2>
+                    
+                </div>
+                <div class="item shop">
+                    <img src="images/bg_shop.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#fbsection3" class="icon"></a>
+                    <h2>Events</h2>
+                    
+                </div>
+                <div class="item camera">
+                    <img src="images/bg_camera.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#fbsection4" class="icon"></a>
+                    <h2>Gallery</h2>
+                   
+                </div>
+                <div class="item fav">
+                    <img src="images/bg_fav.png" alt="" width="199" height="199" class="circle"/>
+                    <a href="#fbsection5" class="icon"></a>
+                    <h2>Sponsors</h2>
+                    
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-  	</header>
-    <div class="section sTop">
-      <div class="inner">
-      </div>
-      <br class="clear">
-    </div>
-    <div class="section s1">
-      <div class="inner">
-      <h1>Section 1</h1>
-      </div>
-    </div>
-    <div class="section s2">
-      <div class="inner">
-      <h1>Section 2</h1>
-      </div>
-    </div>
-    <div class="section s3">
-      <div class="inner">
-      <h1>Section 3</h1>
-      </div>
-    </div>
-    <div class="section s4">
-      <div class="inner">
-      <h1>Section 4</h1>
-      </div>
-    </div>
-    <div class="section s5">
-      <div class="inner">
-      <h1>Section 5</h1>
-      </div>
-    </div>
-  </div>
-   <footer>
-    <div class="container">
-      <br><br>
-      <p class="green"> © Aurganon 2014 .v1 </p> 
-      <a href="#top"><img src="images/back-top.png" alt="back-top" class="back-top"/></a>
-    </div> 
-   </footer>   
-   </body>
+			</header>	
+			<div id="cbp-fbscroller" class="cbp-fbscroller">
+				
+				<section id="fbsection1">
+					<div class="content-box" id="widget">
+						<h2>Title goes here</h2>
+						
+						<div class="content">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+						</div>
+					</div>
+				</section>
+				<section id="fbsection2">
+					<div class="content-box" id="widget">
+						<h2>Title goes here</h2>
+						
+						<div class="content">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+						</div>
+					</div>
+				</section>
+				<section id="fbsection3">
+					<div class="content-box" id="widget">
+						<h2>Events</h2>
+						
+						<div class="content">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+						</div>
+					</div>
+					<div class="button-wrapper">
+							<a href="events.html" class="a-btn">
+								<span class="a-btn-text">Hit Here For</span> 
+								<span class="a-btn-slide-text">Events!</span>
+								<span class="a-btn-icon-right"><span></span></span>
+							</a>
+					</div>
+				</section>
+				<section id="fbsection4">
+					<div class="content-box" id="widget">
+						<h2>Title goes here</h2>
+						
+						<div class="content">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+						</div>
+					</div>
+				</section>
+				<section id="fbsection5">
+					<div class="content-box" id="widget">
+						<h2>Title goes here</h2>
+						
+						<div class="content">
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est sapien. Maecenas aliquam scelerisque eros quis luctus. Phasellus nisi lectus, tempus ut scelerisque in, adipiscing nec neque. Nullam ac metus eget lorem imperdiet luctus non in mauris. Maecenas porta ultricies sapien, non laoreet nisl accumsan egestas. Etiam viverra tincidunt euismod. Vestibulum dui massa, ultrices ac malesuada eu, varius quis ipsum. Nam tincidunt tempor nulla, id consequat velit hendrerit a. Fusce bibendum condimentum massa non fringilla. Ut sagittis, lorem eu varius tempus, nisl nisi aliquet odio, eu fringilla arcu arcu at lectus. Sed ligula magna, dapibus fringilla vestibulum quis, pulvinar vitae libero. Nunc tempor elementum magna, volutpat lacinia neque suscipit bibendum. Nunc vel pulvinar turpis. Etiam pretium malesuada nibh vel pellentesque
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/jquery.debouncedresize.js"></script>
+		<script src="js/cbpFixedScrollLayout.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+		$(function() {
+				cbpFixedScrollLayout.init();
+			});
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+	</body>
 </html>

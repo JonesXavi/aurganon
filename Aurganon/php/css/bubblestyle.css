@@ -1,0 +1,84 @@
+.navigation{
+    margin: 0px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+.navigation .item{
+    position:absolute;
+}
+.user{
+    top:60px;
+    left:70px;
+}
+.home{
+   top:60px;
+   left:274px;
+}
+.shop{
+   top:60px;
+   left:475px;
+}
+.camera{
+   top:60px;
+   left:675px;
+}
+.fav{
+   top:60px;
+   left:875px;
+}
+a.icon{
+    width:52px;
+    height:52px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+.user a.icon{
+    background:transparent url(../images/user.png) no-repeat 0px 0px;
+}
+.home a.icon{
+    background:transparent url(../images/home.png) no-repeat 0px 0px;
+}
+.shop a.icon{
+    background:transparent url(../images/shop.png) no-repeat 0px 0px;
+}
+.camera a.icon{
+    background:transparent url(../images/camera.png) no-repeat 0px 0px;
+}
+.fav a.icon{
+    background:transparent url(../images/fav.png) no-repeat 0px 0px;
+}
+.navigation .item a.active{
+    background-position:0px -52px;
+}
+.item img.circle{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:52px;
+    height:52px;
+    opacity:0.1;
+    
+}
+.item h2{
+    position:absolute;
+    width:147px;
+    height:52px;
+    color: black;
+    font-size:18px;
+    top:0px;
+    left:52px;
+    text-indent:10px;
+    line-height:52px;
+    text-shadow:1px 1px 1px #fff;
+    text-transform:uppercase;
+}
+.item h2.active{
+    color: white;
+    text-shadow:1px 0px 1px #555;
+}
+

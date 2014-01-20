@@ -1,3 +1,12 @@
+function refresh(){
+	$(".og-details").find(".desc").hide();
+	$(".og-details").find(".desc-1").fadeIn();
+	$(".og-details").find(".tabs").find("li").click(function(event){
+	var id = event.currentTarget.className.split("-")[1]
+	$(".og-details").find(".desc").hide();
+	$(".og-details").find(".desc-"+id).fadeIn();
+	})
+}
 /*
 * debouncedresize: special jQuery event that happens once after a window resize
 *
@@ -275,10 +284,10 @@ var Grid = (function() {
 			hidePreview();
 			return false;
 		} ).children( 'a' ).on( 'click', function(e) {
-
 			var $item = $( this ).parent();
 			// check if item already opened
 			current === $item.index() ? hidePreview() : showPreview( $item );
+			refresh()
 			return false;
 
 		} );
@@ -321,7 +330,7 @@ var Grid = (function() {
 		preview = $.data( this, 'preview', new Preview( $item ) );
 		// expand preview overlay
 		preview.open();
-
+	
 	}
 
 	function hidePreview() {
@@ -344,8 +353,10 @@ var Grid = (function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#">Visit website</a>' );
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+			this.$tabs = $('<ul></ul>').addClass("tabs");
+			this.$desc = $('<div></div>');
+			this.$href = $( '<a href="#"></a>' );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$tabs ,this.$desc ,this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -382,11 +393,27 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
-				};
+					description : $itemEl.data( 'description' ),
+					desc_1: $itemEl.data( 'desc-one' ), 
+					desc_2: $itemEl.data( 'desc-two' ), 
+					desc_3: $itemEl.data( 'desc-three' ),
+					desc_4: $itemEl.data( 'desc-four' ), 
+					tabs: ["Overview |","Rules |","Venue |","Contact"]
 
+				};
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
+			var html = _.reduce(eldata.tabs,function(memo,data,key){
+				var ref = key + 1
+				return memo + "<li class='tab-"+ref+"'>" + data + "</li>"
+			},"")
+			var desc_html = "";
+			desc_html = "<div class='desc desc-1'><p>"+eldata.desc_1+"</p></div>"
+			desc_html += "<div class='desc desc-2'><p>"+eldata.desc_2+"</p></div>"
+			desc_html += "<div class='desc desc-3'><p>"+eldata.desc_3+"</p></div>"
+			desc_html += "<div class='desc desc-4'><p>"+eldata.desc_4+"</p></div>"
+			this.$tabs.html(html);
+			this.$desc.html(desc_html)
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
@@ -419,6 +446,9 @@ var Grid = (function() {
 				this.setHeights();
 				// scroll to position the preview in the right place
 				this.positionPreview();
+
+				refresh();
+
 			}, this ), 25 );
 
 		},
