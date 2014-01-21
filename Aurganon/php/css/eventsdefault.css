@@ -11,6 +11,8 @@ html { height: 100%; }
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	color: white;
+	font-weight: 400;
 }
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
@@ -70,9 +72,16 @@ a {
 }
 
 .container > header h1 span {
-	display: block;
 	font-size: 20px;
 	font-weight: 300;
+}
+
+.container >  h5 {
+	padding-left: 90%;
+	padding-top: 55px;
+	width: 10px;
+	height: 10px;
+	right: 0px;
 }
 
 .main > p {

@@ -145,6 +145,16 @@ body {
 	overflow: hidden;
 	opacity: 0.6;
 }
+.gr-gallery nav span h1{
+	width: 90px;
+	height: 100%;
+	padding-left: 90%;
+	background: url(../images/home1.png);
+	float: right;
+	text-indent: -100%;
+	overflow: hidden;
+	opacity: 0.6;
+}
 
 .gr-gallery nav span:hover {
 	opacity: 1;

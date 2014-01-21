@@ -254,7 +254,7 @@ var Gallery = (function() {
 			if( this.totalItems > 1 ) {
 				this.$navPrev = $( '<span class="gr-prev">prev</span>' ).on( 'click', $.proxy( this.navigate, this, 'prev' ) );
 				this.$navNext = $( '<span class="gr-next">next</span>' ).on( 'click', $.proxy( this.navigate, this, 'next' ) );
-				this.$nav = $( '<nav/>' ).append( this.$navPrev, this.$navNext ).appendTo( $gallery );
+				this.$nav = $( '<nav/>' ).append( this.$navPrev, this.$navNext).appendTo( $gallery );
 			}
 
 			// add caption container

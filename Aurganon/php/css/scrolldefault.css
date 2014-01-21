@@ -146,3 +146,18 @@ a:hover {
 				-webkit-border-radius: 6px;
 				background: #666 url(images/scrollbar_thumb_bg.png) no-repeat center;
 			}
+#panoram-coupon-bar-little {
+		position: fixed;
+		top: 97px;
+		right: -100px;
+		background-color: #42BE23;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 10px 10px 10px 10px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		-webkit-box-shadow: 2px 2px 2px #666666;
+		cursor: pointer;
+		z-index: 9999999;
+			}

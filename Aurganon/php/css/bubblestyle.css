@@ -10,23 +10,23 @@
     position:absolute;
 }
 .user{
-    top:80px;
+    top:90px;
     left:70px;
 }
 .home{
-   top:80px;
+   top:90px;
    left:274px;
 }
 .shop{
-   top:80px;
+   top:90px;
    left:475px;
 }
 .camera{
-   top:80px;
+   top:90px;
    left:675px;
 }
 .fav{
-   top:80px;
+   top:90px;
    left:875px;
 }
 a.icon{
@@ -68,7 +68,7 @@ a.icon{
     position:absolute;
     width:147px;
     height:52px;
-    color: black;
+    color: white;
     font-size:18px;
     top:0px;
     left:52px;
