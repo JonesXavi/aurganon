@@ -44,6 +44,14 @@ a {
 	color: #555;
 	text-decoration: none;
 }
+a:hover,
+a:active {
+	color: #333;
+}
+
+a img {
+	border: none;
+}
 
 .container {
 	width: 100%;
